@@ -16,14 +16,14 @@ const CardList = ({
     onPressCardItem
 }) => (
 
-    <Card {...props} dataArray={ arraylist }
+    <Card dataArray={ arraylist }
         renderRow={(item) =>
             <CardItem bordered>
             <Item 
                 text={ item.text } 
                 done={ item.done }
-                onLongPress={ onLongPressCardItem(item) }
-                onPress={ onPressCardItem(item.id) } />
+                onLongPress={ () => onLongPressCardItem(item) }
+                onPress={ () => onPressCardItem(item.id) } />
             </CardItem>
         }>
     </Card>

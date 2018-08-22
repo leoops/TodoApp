@@ -20,7 +20,8 @@ const TodoScreen = ({
     
     const { text } = todo;
 
-    onPressCardItem = (item) => dispatchToggleTodo(item);
+    onPressCardItem = (item) => dispatchToggleTodo(item)
+
     
     onLongPressCardItem = (itemId) => dispatchSetEdittingTodo(itemId);
 
@@ -53,11 +54,11 @@ const TodoScreen = ({
             <View>
                 <CardList
                     arraylist={ todos }
-                    onPressCardItem={ () =>
-                        this.onLongPressCardItem()
+                    onPressCardItem={ 
+                        this.onPressCardItem
                     }
-                    onLongPressCardItem={ () => 
-                        this.onLongPressCardItem()
+                    onLongPressCardItem={ 
+                        this.onLongPressCardItem
                     }
                     />
             </View>
